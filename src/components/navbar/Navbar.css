@@ -1,0 +1,79 @@
+:root {
+  --light-gray: #e9ecf2;
+  --light-green: #3ea175;
+  --gray: #a5aaad;
+  --blue: #2e4a66;
+  --vivid-blue: #265acc;
+  --light-blue: #469cac;
+  --red: #cc3d38;
+  --yellow: #a98921;
+  --green: #3b9668;
+  --white: #ffffff;
+  --light-gray2: #d9d9d9;
+}
+
+.navbar {
+  background: var(--white);
+  grid-area: nav;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.nav_icon {
+  display: none;
+}
+
+.nav_icon > i {
+  font-size: 26px;
+  color: var(--gray);
+}
+
+.navbar__left > a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.navbar__left .active_link {
+  color: var(--vivid-blue);
+  border-bottom: 3px solid var(--vivid-blue);
+  padding-bottom: 12px;
+}
+
+.navbar__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__right > a {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar__right > a > i {
+  color: var(--gray);
+  font-size: 16px;
+  border-radius: 50px;
+  background: var(--white);
+  box-shadow: 2px 2px 5px var(--light-gray2), -2px -2px 5px var(--white);
+  padding: 7px;
+}
+
+@media only screen and (max-width: 978px) {
+    .nav_icon {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar__left {
+        display: none;
+    }
+}
